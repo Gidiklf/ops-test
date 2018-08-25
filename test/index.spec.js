@@ -1,7 +1,7 @@
 const request = require('request-promise');
 
 process.env.HELLO_PORT = 8866;
-const server = require('../index');
+const server = require('../dist/index').default;
 
 describe('test app', () => {
 

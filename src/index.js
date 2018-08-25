@@ -1,4 +1,5 @@
-const express = require('express');
+import express from 'express';
+
 const app = express();
 
 app.get('/', (req, res) => {
@@ -9,5 +10,5 @@ app.get('/', (req, res) => {
 const port = process.env.HELLO_PORT || 80;
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}`));
 
-module.exports = server;
+export default server;
 

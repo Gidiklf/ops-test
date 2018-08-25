@@ -2,9 +2,11 @@
   "name": "ops-test",
   "version": "0.0.1",
   "description": "Hello World container",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "babel src -d dist",
+    "clean": "rm -Rf dist/"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,12 @@
   },
   "homepage": "https://github.com/bookmd/ops-test#readme",
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "express": "^4.16.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "mocha": "^5.2.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
