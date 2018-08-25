@@ -7,5 +7,7 @@ app.get('/', (req, res) => {
 })
 
 const port = process.env.HELLO_PORT || 80;
-app.listen(port, () => console.log(`Example app listening on port ${port}`));
+const server = app.listen(port, () => console.log(`Example app listening on port ${port}`));
+
+module.exports = server;
 
