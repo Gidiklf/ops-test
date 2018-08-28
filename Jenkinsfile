@@ -4,6 +4,7 @@ node('master') {
   stage('Checkout'){
 
           checkout scm
+	  sh 'whoami'
         
        }
       stage('Build Docker'){
